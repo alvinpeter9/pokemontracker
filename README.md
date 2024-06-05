@@ -1,30 +1,58 @@
-# React + TypeScript + Vite
+# PokéTracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Welcome to PokéTracker**, your ultimate companion for all things Pokémon!<br>
+Discover, catch, and train Pokémon, explore their abilities, and embark on exciting adventures in the Pokémon world.<br>
+Start your journey now!
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+![PokéTracker Logo](public/assets/pokemon.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- ⭐ Search and learn about your favorite Pokémon
+- ✨ Explore Pokémon abilities and details
+- 🚀 Train and level up your Pokémon team
+- ✅ Enjoy a beautiful and intuitive user interface
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## How to Run
+
+Visit [PokeTracker Website](https://poketracker.netlify.app) Or
+Follow these steps to run PokéTracker locally on your machine:
+
+### Prerequisites
+
+- Node.js installed on your machine
+- npm or yarn package manager
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/alvinpeter9/pokemontracker.git
+cd poketracker
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Install Dependencies
+```bash
+npm install
+# or
+yarn install
+```
+
+### Start the Application
+
+```bash
+npm run dev
+# or
+yarn run dev
+```
+
+### Technologies Used
+
+- ⚛️ React.js
+- 📘 TypeScript
+- 🎨 Material-UI
+- 🔄 Tanstack Query
+- 📡 Axios
+- 🐾 PokeAPI
+- 🌟 FuntranslationAPI
