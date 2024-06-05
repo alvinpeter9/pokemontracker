@@ -23,6 +23,7 @@ const PokemonList: React.FC = () => {
 
   const handleChangePage = useCallback(
     (event: React.ChangeEvent<unknown>, newPage: number) => {
+      event.preventDefault()
       setPage(newPage);
       setSearchQuery("");
     },

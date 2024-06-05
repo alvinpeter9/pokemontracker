@@ -24,6 +24,21 @@ export const mockPokemonData = [
   { name: "spearow", url: "https://pokeapi.co/api/v2/pokemon/21/" },
 ];
 
+const mockAbilities = [
+  {
+    ability: {
+      name: "chlorophyll",
+      url: "https://pokeapi.co/api/v2/ability/34/",
+    },
+  },
+  {
+    ability: {
+      name: "overgrow",
+      url: "https://pokeapi.co/api/v2/ability/65/",
+    },
+  },
+];
+
 export const mockAbilityDetail = {
   effect_entries: [
     {
@@ -33,13 +48,18 @@ export const mockAbilityDetail = {
   ],
 };
 
-
 export const handlers = [
   // Intercept "GET https://example.com/user" requests...
   http.get("https://pokeapi.co/api/v2/pokemon?limit=151", () => {
     // ...and respond to them using this JSON response.
     return HttpResponse.json({
       results: [...mockPokemonData],
+    });
+  }),
+  http.get("https://pokeapi.co/api/v2/pokemon/bulbasaur", async () => {
+    return HttpResponse.json({
+      abilities: [...mockAbilities],
+      sprites: { front_default: "bulbasaur.png" },
     });
   }),
 ];

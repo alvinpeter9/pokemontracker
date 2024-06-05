@@ -11,6 +11,7 @@ import {
 import Error from "./microComponents/Error";
 import { AbilityEffect, PokemonDetail } from "../utils/types";
 
+
 export const PokemonDetails: React.FC = () => {
   const [englishEffect, setEnglishEffect] = useState<string>("");
   const [yodaEffect, setYodaEffect] = useState<string>("");
