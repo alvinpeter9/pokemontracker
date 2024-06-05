@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #09090B;
+  color: #C0C0C0;
+}
+
+a {
+  color: whitesmoke;
+}
+.switchBtn {
+  display: flex;
+  align-items: center;
+  background-color: #C0C0C0;
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+}
+
+.toggleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #18181B;
+  color: #C0C0C0;
+  font-size: .9rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  text-align: center;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.effect_language {
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+.justify_start {
+  justify-content: start;
+  transition: justify-content 0.5s;
+}
+
+.justify_end {
+  justify-content: end;
+  transition: justify-content 0.5s;
+}
