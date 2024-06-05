@@ -6,7 +6,7 @@ Start your journey now!
 
 
 
-![PokéTracker Logo](public/assests/pokemon.png)
+![PokéTracker Logo](public/assets/pokemon.png)
 
 ## Features
 
