@@ -1,12 +1,12 @@
-# PokéTracker
+# PokémonTracker
 
-**Welcome to PokéTracker**, your ultimate companion for all things Pokémon!<br>
+**Welcome to PokémonTracker**, your ultimate companion for all things Pokémon!<br>
 Discover, catch, and train Pokémon, explore their abilities, and embark on exciting adventures in the Pokémon world.<br>
 Start your journey now!
 
 
 
-![PokéTracker Logo](public/assets/pokemon.png)
+![PokémonTracker Logo](public/assets/pokemon.png)
 
 ## Features
 
@@ -17,7 +17,7 @@ Start your journey now!
 
 ## How to Run
 
-Visit [PokeTracker Website](https://poketracker.netlify.app) Or
+Visit [PokemonTracker Website](https://pokemontracker.vercel.app) Or
 Follow these steps to run PokéTracker locally on your machine:
 
 ### Prerequisites
@@ -29,7 +29,7 @@ Follow these steps to run PokéTracker locally on your machine:
 
 ```bash
 git clone https://github.com/alvinpeter9/pokemontracker.git
-cd poketracker
+cd pokemontracker
 ```
 
 ### Install Dependencies
@@ -47,6 +47,26 @@ npm run dev
 yarn run dev
 ```
 
+# Project Structure
+
+```plaintext
+pokemontracker/
+├── public/                 # Static assets
+├── src/
+│   ├── components/         # React components
+│   ├── hoc/                # Higher Order Components
+│   ├── lib/                # Library functions (e.g., API calls)
+│   ├── mocks/              # MSW handlers for mocking APIs
+│   ├── utils/              # Utility types and functions
+│   ├── App.tsx             # Main app component
+│   ├── index.tsx           # Entry point of the application
+│   └── ...                 # Other folders and files
+├── .gitignore              # Git ignore file
+├── package.json            # NPM dependencies and scripts
+├── README.md               # Project documentation
+└── vite.config.ts          # Vite configuration file
+```
+
 ### Technologies Used
 
 - ⚛️ React.js
@@ -56,3 +76,14 @@ yarn run dev
 - 📡 Axios
 - 🐾 PokeAPI
 - 🌟 FuntranslationAPI
+- 🧪 Vitest
+- 🛠️ Mock Service Worker (MSW)
+
+### Testing
+PokemonTracker app was tested with Vitest and MSW, to run the test after installing the application dependencies:
+
+```bash
+npm run test
+# or
+yarn run test
+```
