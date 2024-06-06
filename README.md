@@ -1,24 +1,24 @@
 # PokémonTracker
 
 **Welcome to PokémonTracker**, your ultimate companion for all things Pokémon!<br>
-Discover, catch, and train Pokémon, explore their abilities, and embark on exciting adventures in the Pokémon world.<br>
+Discover and learn about Pokémon, explore their abilities, and embark on exciting adventures in the Pokémon world.<br>
 Start your journey now!
 
 
 
 ![PokémonTracker Logo](public/assets/pokemon.png)
 
-## Features
+### Features
 
-- ⭐ Search and learn about your favorite Pokémon
-- ✨ Explore Pokémon abilities and details
-- 🚀 Train and level up your Pokémon team
-- ✅ Enjoy a beautiful and intuitive user interface
+- 🗂️ Fetch and display a list of Pokémon.
+- 📋 View detailed information about each Pokémon.
+- 🌟 Translate Pokémon abilities to Yoda language.
+- 🔍 Search and paginate through the list of Pokémon.
 
-## How to Run
+### How to Run
 
 Visit [PokemonTracker Website](https://pokemontracker.vercel.app) Or
-Follow these steps to run PokéTracker locally on your machine:
+Follow these steps to run PokémonTracker locally on your machine:
 
 ### Prerequisites
 
@@ -47,7 +47,7 @@ npm run dev
 yarn run dev
 ```
 
-# Project Structure
+### Project Structure
 
 ```plaintext
 pokemontracker/
@@ -59,8 +59,11 @@ pokemontracker/
 │   ├── mocks/              # MSW handlers for mocking APIs
 │   ├── utils/              # Utility types and functions
 │   ├── App.tsx             # Main app component
-│   ├── index.tsx           # Entry point of the application
-│   └── ...                 # Other folders and files
+│   ├── App.test.tsx        # Tests for the main app component
+│   ├── main.tsx            # Entry point of the application
+│   ├── setupTest.tsx       # Test setup file
+│   └── ...                 # Other files
+├── index.html              # HTML template
 ├── .gitignore              # Git ignore file
 ├── package.json            # NPM dependencies and scripts
 ├── README.md               # Project documentation
@@ -87,3 +90,7 @@ npm run test
 # or
 yarn run test
 ```
+
+## Thank You! 👏
+
+Thank you for checking out the Pokemon Tracker app! We hope you enjoy exploring the world of Pokémon with our application. If you have any questions, feedback, or suggestions, feel free to reach out. Happy Pokémon hunting! 🚀
