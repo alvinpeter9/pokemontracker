@@ -2,7 +2,7 @@ import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import App from "./App";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { AppProvider } from "./components/hoc/AppContext";
+import { AppProvider } from "./hoc/AppContext";
 import { server } from "./mocks/worker";
 
 // initialize a virtual user
@@ -111,8 +111,7 @@ describe("App tests", () => {
     expect(screen.queryByText("beedrill")).not.toBeInTheDocument(); // Ensure next page data is not present
   });
 
-
-  it("loads pokemon effect component when a Pokémon name is clicked", async () => {
+  it("loads pokemon details component when a Pokémon name is clicked", async () => {
     renderWithClient(<App />);
 
     // Wait for the initial data to load
@@ -129,10 +128,13 @@ describe("App tests", () => {
 
     // Wait for the Pokémon details component to load
     await waitFor(() => {
-      expect(screen.getByText("BULBASAUR")).toBeInTheDocument();
-      expect(screen.getByText("Abilities")).toBeInTheDocument();
+      expect(screen.getByRole("heading", { level: 4 })).toBeInTheDocument();
+      expect(screen.getByRole("heading", { level: 4 })).toHaveTextContent(
+        "bulbasaur"
+      );
     });
-    expect(screen.getByText("overgrow")).toBeInTheDocument();
-    expect(screen.getByText("chlorophyll")).toBeInTheDocument();
+    expect(screen.getByText("EN")).toBeInTheDocument();
+    expect(screen.getByText("Abilities 💪")).toBeInTheDocument();
+    expect(screen.getByText("Effect 🔥")).toBeInTheDocument();
   });
 });

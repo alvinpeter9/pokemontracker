@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from "react";
-import { useAppContext } from "./hoc/AppContext";
+import { useAppContext } from "../hoc/AppContext";
 import Wrapper from "./microComponents/Wrapper";
 import SearchBar from "./microComponents/SearchBar";
 import { PokemonDetails } from "./PokemonDetail";
@@ -20,6 +20,7 @@ const PokemonList: React.FC = () => {
   const filteredData = data?.filter((pokemon: Pokemon) =>
     pokemon.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
 
   const handleChangePage = useCallback(
     (event: React.ChangeEvent<unknown>, newPage: number) => {

@@ -1,7 +1,7 @@
 import { Button, Box } from '@mui/material';
 import { ChevronLeft } from 'lucide-react';
 import React from 'react';
-import { useAppContext } from '../hoc/AppContext';
+import { useAppContext } from '../../hoc/AppContext';
 
 
 interface LanguageSwitcherProps {

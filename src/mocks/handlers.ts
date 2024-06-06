@@ -27,14 +27,14 @@ export const mockPokemonData = [
 const mockAbilities = [
   {
     ability: {
-      name: "chlorophyll",
-      url: "https://pokeapi.co/api/v2/ability/34/",
+      name: "overgrow",
+      url: "https://pokeapi.co/api/v2/ability/65/",
     },
   },
   {
     ability: {
-      name: "overgrow",
-      url: "https://pokeapi.co/api/v2/ability/65/",
+      name: "chlorophyll",
+      url: "https://pokeapi.co/api/v2/ability/34/",
     },
   },
 ];
@@ -59,7 +59,17 @@ export const handlers = [
   http.get("https://pokeapi.co/api/v2/pokemon/bulbasaur", async () => {
     return HttpResponse.json({
       abilities: [...mockAbilities],
-      sprites: { front_default: "bulbasaur.png" },
+    });
+  }),
+  http.get("https://pokeapi.co/api/v2/ability/65/", async () => {
+    return HttpResponse.json({
+      effect_entries: [
+        {
+          effect:
+            "Powers up Grass-type moves when the Pokémon's HP is low.",
+          language: { name: "en" },
+        },
+      ],
     });
   }),
 ];

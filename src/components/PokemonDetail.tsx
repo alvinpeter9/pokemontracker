@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Box, Card, CardContent, Divider, Typography } from "@mui/material";
-import { useAppContext } from "./hoc/AppContext";
+import { useAppContext } from "../hoc/AppContext";
 import { useQuery } from "@tanstack/react-query";
 import LanguageSwitcher from "./microComponents/LanguageSwitcher";
 import {
@@ -38,6 +38,7 @@ export const PokemonDetails: React.FC = () => {
     },
     enabled: !!pokemonData && pokemonData.abilities.length > 0,
   });
+
 
   useEffect(() => {
     if (abilitiesData) {

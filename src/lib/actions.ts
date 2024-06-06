@@ -21,6 +21,7 @@ export const fetchPokemonDetail = async (pokemonName: string) => {
 
 export const fetchAbilityDetail = async (abilityUrl: string) => {
   const { data } = await axios.get(abilityUrl);
+  
   return data.effect_entries;
 };
 

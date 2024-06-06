@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Pagination } from '@mui/material';
-import { useAppContext } from '../hoc/AppContext';
+import { useAppContext } from '../../hoc/AppContext';
 
 interface Pokemon {
   name: string;

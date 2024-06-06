@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { AppProvider } from "./components/hoc/AppContext";
+import { AppProvider } from "./hoc/AppContext";
 import PokemonList from "./components/PokemonList";
 import HeroSection from "./components/HeroSection";
 import Footer from "./components/Footer";
