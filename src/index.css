@@ -12,6 +12,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #09090B;
+  background-image: radial-gradient(rgba(88, 86, 86, 0.171) 2px, transparent 0);
+  background-size: 30px 30px;
+  background-position: -5px -5px;
   color: #C0C0C0;
 }
 
