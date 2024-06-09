@@ -63,28 +63,28 @@ const Wrapper: React.FC<WrapperProps> = ({
   minHeight,
 }) => {
   return (
-      <Box
-        sx={{
-          display, // Set display property
-          flexDirection,
-          gap: 2,
-          alignItems: "center",
-          justifyContent: "center",
-          borderRadius,
-          padding,
-          margin,
-          border,
-          overflow: "hidden",
-          width,
-          height,
-          maxWidth,
-          position,
-          minHeight,
-          backgroundColor,
-        }}
-      >
-        {children}
-      </Box>
+    <Box
+      sx={{
+        display, // Set display property
+        flexDirection,
+        gap: 2,
+        alignItems: "center",
+        justifyContent: "center",
+        borderRadius,
+        padding,
+        margin,
+        border,
+        overflow: "hidden",
+        width,
+        height,
+        maxWidth,
+        position,
+        minHeight,
+        backgroundColor,
+      }}
+    >
+      {children}
+    </Box>
   );
 };
 

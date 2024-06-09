@@ -49,7 +49,6 @@ const PokemonTableCard: React.FC<PokemonTableProps> = ({
     <Wrapper
       display={error || isLoading ? "block" : "flex"}
       width="100%"
-      minHeight={selectedPokemon? "100vh":"auto"}
       position="relative"
       backgroundColor="whitesmoke"
     >
@@ -124,7 +123,8 @@ const PokemonTableCard: React.FC<PokemonTableProps> = ({
           color="primary"
         />
       </Card>
-      <PokemonDetails />
+      <PokemonDetails
+      />
     </Wrapper>
   );
 };

@@ -11,13 +11,13 @@ import {
 import Error from "./microComponents/Error";
 import { AbilityEffect, PokemonDetail } from "../utils/types";
 
+
 // the pokemon details are rendered on this page, it shows the name, abilities
 // and effects of the pokemon, there is also a switch button at the top which
 // allows user to toggle the effect between yoda language and english
 
 
 export const PokemonDetails: React.FC = () => {
-
   const [englishEffect, setEnglishEffect] = useState<string>("");
   const [yodaEffect, setYodaEffect] = useState<string>("");
   const { selectedPokemon, language, setLanguage, LanguageOptions } =
@@ -61,9 +61,9 @@ export const PokemonDetails: React.FC = () => {
           console.error("Error translating effect:", error);
         }
       };
-
       translate();
     }
+
     return () => {
       setYodaEffect("");
       setEnglishEffect("");
@@ -86,84 +86,86 @@ export const PokemonDetails: React.FC = () => {
     language === LanguageOptions.ENGLISH ? englishEffect : yodaEffect;
 
   return (
-      <Card
+    <Card
+      sx={{
+        position: "absolute",
+        right: 0,
+        width: selectedPokemon ? "90%" : "0",
+        transition: "width 0.5s",
+        height: "100%",
+        borderRadius: 0,
+        overflowX: "hidden",
+        overflowY: "visible",
+      }}
+    >
+      <LanguageSwitcher handleLanguageSwitch={handleLanguageSwitch} />
+      <Divider />
+      <CardContent
         sx={{
-          position: "absolute",
-          right: 0,
-          width: selectedPokemon ? "90%" : "0",
-          transition: "width 0.5s",
-          height: "100%",
-          borderRadius: 0,
+          margin: 2,
         }}
       >
-        <LanguageSwitcher handleLanguageSwitch={handleLanguageSwitch} />
-        <Divider />
-        <CardContent
+        <Typography
+          variant="h4"
           sx={{
-            margin: 2,
+            fontWeight: "bold",
+            textTransform: "uppercase",
+            textAlign: "center",
           }}
         >
-          <Typography
-            variant="h4"
-            sx={{
-              fontWeight: "bold",
-              textTransform: "uppercase",
-              textAlign: "center",
-            }}
-          >
-            {selectedPokemon}
+          {selectedPokemon}
+        </Typography>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            margin: "auto",
+          }}
+        >
+          <img
+            width="200px"
+            src={pokemonData?.sprites?.front_default}
+            alt="Pokemon"
+          />
+          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+            Abilities 💪
           </Typography>
           <Box
             sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              margin: "auto",
+              width: "100%",
+              padding: 2,
+              border: 1,
+              borderColor: "#C0C0C0",
+              borderRadius: "16px",
             }}
           >
-            <img
-              width="200px"
-              src={pokemonData?.sprites?.front_default}
-              alt="Pokemon"
-            />
-            <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-              Abilities 💪
-            </Typography>
-            <Box
-              sx={{
-                width: "100%",
-                padding: 2,
-                border: 1,
-                borderColor: "#C0C0C0",
-                borderRadius: "16px",
-              }}
-            >
-              {pokemonData?.abilities.map((ability, index) => (
-                <div key={index}>
-                  <Typography variant="subtitle1" sx={{ textAlign: "center" }}>
-                    ⭐ {ability.ability.name}
-                  </Typography>
-                  {index < pokemonData.abilities.length - 1 && <Divider />}
-                </div>
-              ))}
-            </Box>
-            <Typography variant="h6" sx={{ fontWeight: "bold", marginTop: 2 }}>
-              Effect 🔥
-            </Typography>
-            <Box
-              sx={{
-                width: "100%",
-                padding: 2,
-                border: 1,
-                borderColor: "#C0C0C0",
-                borderRadius: "16px",
-              }}
-            >
-              <Typography variant="subtitle1">{currentEffect}</Typography>
-            </Box>
+            {pokemonData?.abilities.map((ability, index) => (
+              <div key={index}>
+                <Typography variant="subtitle1" sx={{ textAlign: "center" }}>
+                  ⭐ {ability.ability.name}
+                </Typography>
+                {index < pokemonData.abilities.length - 1 && <Divider />}
+              </div>
+            ))}
           </Box>
-        </CardContent>
-      </Card>
+          <Typography variant="h6" sx={{ fontWeight: "bold", marginTop: 2 }}>
+            Effect 🔥
+          </Typography>
+          <Box
+            sx={{
+              width: "100%",
+              padding: 2,
+              border: 1,
+              borderColor: "#C0C0C0",
+              borderRadius: "16px",
+            }}
+          >
+            <Typography variant="subtitle1">{currentEffect}</Typography>
+          </Box>
+        </Box>
+      </CardContent>
+    </Card>
   );
 };
