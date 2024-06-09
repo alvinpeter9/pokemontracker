@@ -3,6 +3,7 @@ import { ChevronLeft } from 'lucide-react';
 import React from 'react';
 import { useAppContext } from '../../hoc/AppContext';
 
+// this component renders a toggleswitch for the effect tranlation between english and yoda
 
 interface LanguageSwitcherProps {
   handleLanguageSwitch: () => void;

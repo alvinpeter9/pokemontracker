@@ -7,6 +7,7 @@ const Loading = () => {
       margin="auto"
       padding="20px"
       width="100%"
+      height="100%"
       sx={{
         display: "flex",
         flexDirection: "column",
